@@ -1,0 +1,21 @@
+{
+  "params": {
+      "server":"True",
+      "local_uri":"mysql+pymysql://root:test1234@192.168.1.209/laycoding",
+      "prod_uri":"mysql+pymysql://root:test1234@192.168.1.209/laycoding,",
+      "Blog_name": "LayCoding",
+      "fb_uri":"https://facebook.com/laycoding",
+      "tw_uri":"https://twitter.com/laycoding",
+      "git_uri": "https://github.com/laycoding",
+      "EMAIL_USER": "rs223483@gmail.com",
+      "EMAIL_PASS": "5652988170",
+      "about_text": "Hi,i am Rohan and i love Python Programming ",
+      "no_of_post": 2,
+      "login_img" : "browser.svg",
+      "Admin_user": "admin",
+      "Admin_pass": "test1234",
+      "upload_path": "/home/dbws/virtualenvpython/web/upload"
+
+  }
+
+}

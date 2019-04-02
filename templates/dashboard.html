@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+{% block body %}
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('{{ url_for('static',filename='img/home-bg.jpg')}} ')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h1>Admin panel</h1>
+            <span class="subheading">Manage Your Post Here</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+      <h1>Basic Action</h1>
+<br>
+      <a href="/edit/0"><button class="btn btn-primary float-center">Upload a new Post</button></a>
+      <a href="/logout"><button class="btn btn-primary float-center">Logout</button></a>
+      <hr>
+      <h1>Upload a file</h1>
+<form action="/uploader" method="post" enctype="multipart/form-data">
+  <input type="file" name="file1">
+  <button type="submit" class="btn btn-primary float-center" >Submit</button>
+</form>
+<hr>
+<h1>Edit Posts</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Sno</th>
+      <th scope="col">Title</th>
+      <th scope="col">Date</th>
+      <th scope="col">Edit</th>
+      <th scope="col">Delete</th>
+
+    </tr>
+  </thead>
+  <tbody>
+  {% for post in posts %}
+    <tr>
+      <th scope="row">{{ post.SNo }}</th>
+      <td>{{ post.Title }}</td>
+      <td>{{ post.Date }}</td>
+      <td><a href="/edit/{{post.SNo}}"><button class="btn btn-primary float-center">Edit</button></a></td>
+      <td><a href="/delete/{{post.SNo}}"><button class="btn btn-primary float-center">Delete</button></a></td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+
+      </div>
+    </div>
+  </div>
+
+
+  {% endblock %}

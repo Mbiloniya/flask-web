@@ -1,0 +1,28 @@
+Developer React Native
+
+install react native on ubuntu for android
+
+Step1: install nodejs
+ + sudo apt-get update
+ + sudo apt-get install nodejs
+ + sudo apt-get install npm
+ + sudo ln -s /usr/bin/nodejs /usr/bin/node
+
+Step 2: Installing Watchman - need install git
+ + sudo apt-get install python-dev
+ + sudo apt-get install automake
+ + sudo apt-get install autoconf
+ + git clone https://github.com/facebook/watchman.git
+ + cd watchman
+ + git checkout v4.5.0  # the latest stable release
+ + ./autogen.sh
+ + ./configure
+ + sudo su --- enter pass switch to root
+ + make
+ + sudo make install
+
+Step 3: install react native - open terminal via root
+ + npm install -g react-native-cli
+
+Step 4: install flow
+ + sudo npm install -g flow-bin
